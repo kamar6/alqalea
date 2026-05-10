@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>قائمة الوجبات - مطعم القلعة</title>
+    <style>
+        body{font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0;}
+        /*شريط التنقل البني*/
+        nav{background-color: #3d2b1f; padding: 20px; text-align: center;}
+        nav a{color: white; text-decoration: none; margin: 015px; font-weight: bold;}
+        /*تمييز زر الوجبات لأنه الصفحة الحالية*/
+        .active-link{background-color: #d35400; padding: 8px 15px; border-radius: 5px;}
+        .content{padding: 20px;}
+        table{width: 100%; border-collapse: collapse; background: white; margin-top: 20px;}
+        th, td{border: 1px solid#ccc; padding: 12px; text-align: center;}
+        th{background-color: #e0e0e0;}
+        .btn-continue{background-color: #d35400; color: white; padding: 10px 30px; border: none; border-radius: 4px; float: left;margin-top: 20px; cursor: pointer;}
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="AboutUs.html">من نحن</a>
+        <a href="Meals.html" class="active-link">الوجبات</a>
+    </nav>
+    <div class="content">
+        <h3>1.3 الوجبات"صفحة" Meals.html</h3>
+         <table>
+        <thead>
+            <tr>
+                <th>الرمز</th>
+                <th>الوجبة</th>
+                <th>السعر</th>
+                <th>إظهار التفاصيل</th>
+                <th>اختيار</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>SF-001</td>
+                <td>الفلافل</td>
+                <td>110000 ل.س</td>
+                <td><input type="checkbox" 
+                    onclick="toggle('d1')">
+                </td>
+                <td><input type="checkbox"></td>
+            </tr>
+            <tr id="d1" style="display: none;">
+                <td colspan="5">
+                    <div style="display: flex; align-items: flex-start; background-color: #fff; padding: 10px;">
+                        <div style="flex: 1;">
+                            <img src="photo_٢٠٢٦-٠٥-٠٩_١٦-٣٩-٣٠ (2).jpg" style="width: 150px; border-radius: 8px;">
+                        </div>
+                        <div style="flex: 2; padding-right: 15px; text-align: right;">
+                            <b>المطبخ:</b>
+                            شرقي<br>
+                            <b>التصنيف:</b>
+                            عربي<br>
+                            <b>المكونات:</b>
+                            حمص، بقدونس، بهارات، ملح، بيكربونات
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>MG-002</td>
+                <td>الحمص</td>
+                <td>180000 ل.س</td>
+                <td><input type="checkbox" 
+                    onclick="toggle('d2')">
+                </td>
+                <td><input type="checkbox"></td>
+            </tr>
+             <tr id="d2" style="display: none;">
+                <td colspan="5">
+                    <div style="display: flex; align-items: flex-start; background-color: #fff; padding: 10px;">
+                        <div style="flex: 1;">
+                            <img src="photo_٢٠٢٦-٠٥-٠٩_١٦-٣٩-١٨.jpg" style="width: 150px; border-radius: 8px;">
+                        </div>
+                        <div style="flex: 2; padding-right: 15px; text-align: right;">
+                            <b>المطبخ:</b>
+                            شرقي<br>
+                            <b>التصنيف:</b>
+                            عربي<br>
+                            <b>المكونات:</b>
+                           حمص، كزبرة، لبن، عصير ليمون، بهارات، ملح
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>BR-003</td>
+                <td>الفتة</td>
+                <td>65000 ل.س</td>
+                 <td><input type="checkbox" 
+                    onclick="toggle('d3')">
+                </td>
+                <td><input type="checkbox"></td>
+            </tr>
+           <tr id="d3" style="display: none;">
+                <td colspan="5">
+                    <div style="display: flex; align-items: flex-start; background-color: #fff; padding: 10px;">
+                        <div style="flex: 1;">
+                            <img src="photo_٢٠٢٦-٠٥-٠٩_١٦-٣٩-٢٦.jpg" style="width: 150px; border-radius: 8px;">
+                        </div>
+                        <div style="flex: 2; padding-right: 15px; text-align: right;">
+                            <b>المطبخ:</b>
+                            شرقي<br>
+                            <b>التصنيف:</b>
+                            عربي<br>
+                            <b>المكونات:</b>
+                           خبز، لبن، ثوم، حمص، ملح،بقدونس، سماق، لوز
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>PA-004</td>
+                <td>المسخن</td>
+                <td>55000 ل.س</td>
+                 <td><input type="checkbox"
+                    onclick="toggle('d4')">
+                </td>
+                <td><input type="checkbox"></td>
+            </tr>
+              <tr id="d4" style="display: none;">
+                <td colspan="5">
+                    <div style="display: flex; align-items: flex-start; background-color: #fff; padding: 10px;">
+                        <div style="flex: 1;">
+                            <img src="photo_٢٠٢٦-٠٥-٠٩_١٦-٣٩-١٢.jpg" style="width: 150px; border-radius: 8px;">
+                        </div>
+                        <div style="flex: 2; padding-right: 15px; text-align: right;">
+                            <b>المطبخ:</b>
+                            شرقي<br>
+                            <b>التصنيف:</b>
+                            عربي<br>
+                            <b>المكونات:</b>
+                           صدور دجاج، بصل، بهارات، صنوبر أو لوز حسب الرغبة
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>PZ-005</td>
+                <td>الخبز الطازج</td>
+                <td>75000 ل.س</td>
+                 <td><input type="checkbox" 
+                    onclick="toggle('d5')">
+                </td>
+                <td><input type="checkbox"></td>
+            </tr>
+                  <tr id="d5" style="display: none;">
+                <td colspan="5">
+                    <div style="display: flex; align-items: flex-start; background-color: #fff; padding: 10px;">
+                        <div style="flex: 1;">
+                            <img src="photo_٢٠٢٦-٠٥-٠٩_١٦-٣٩-٣٠.jpg" style="width: 150px; border-radius: 8px;">
+                        </div>
+                        <div style="flex: 2; padding-right: 15px; text-align: right;">
+                            <b>المطبخ:</b>
+                            شرقي<br>
+                            <b>التصنيف:</b>
+                            عربي<br>
+                            <b>المكونات:</b>
+                           طحين، ماء، ملح، خميرة
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn-continue" onclick="showForm()">متابعة</button>
+    <form id="myForm" style="display: none;">
+
+        <label>الاسم الكامل:</label>
+        <input type="text">
+        <br><br>
+         <label>الرقم الوطني:</label>
+        <input type="text">
+        <br><br>
+        <label>تاريخ الولادة:</label>
+        <input type="date">
+        <br><br>
+         <label>رقم الموبايل:</label>
+        <input type="tel">
+        <br><br> 
+        <label>الإيميل:</label>
+        <input type="email">
+        <br><br>
+        <button type="button" onclick="submitForm();calculateTotal();">إرسال</button>
+    </form>
+
+    <div style="clear: both;"></div>
+</div>
+
+<footer>
+    © 2025 مطعم القلعة
+</footer>
+<script>
+        function toggle(id){ 
+            let row=document.getElementById(id);
+            if(row.style.display==="none"){
+               row.style.display="table-row";
+            }else{
+                row.style.display="none";
+            }
+            }
+        </script>
+    
+    </div>
+    <script>
+        function showForm(){
+            document.getElementById("myForm").style.display="block";
+        }
+    </script>
+    <script>
+function submitForm() {
+    let inputs = document.querySelectorAll("form input");
+
+let name = inputs[0].value;
+let national = inputs[1].value;
+let birth = inputs[2].value;
+let phone = inputs[3].value;
+let email = inputs[4].value;
+
+
+    // التحقق البسيط
+    if(national === ""){
+    alert("الرقم الوطني إجباري");
+    return;
+}
+    
+
+    // التحقق من الاسم (حروف فقط)
+   if(name !== "" && !/^[\u0600-\u06FF\s]+$/.test(name)){
+    alert("الاسم يجب أن يحتوي على أحرف عربية فقط");
+    return;
+}
+    
+
+    // التحقق من الإيميل
+   if(email !== "" && !email.includes("@")){
+    alert("الإيميل غير صحيح");
+    return;
+}
+    if(phone !== "" && !/^09\d{8}$/.test(phone)){
+    alert("رقم الموبايل غير صحيح");
+    return;
+}
+
+    alert("تم إرسال الطلب بنجاح ✔️");
+}
+</script>
+<script>
+function calculateTotal() {
+
+    let rows = document.querySelectorAll("tbody tr");
+
+    let total = 0;
+
+    let details = "";
+
+    rows.forEach(function(row){
+
+        let checkbox = row.querySelector("td:nth-child(5) input[type='checkbox']");
+
+        if(checkbox && checkbox.checked){
+
+            let mealName = row.children[1].innerText;
+
+            let priceText = row.children[2].innerText;
+
+            let price = parseInt(priceText.replace(/[^0-9]/g, ""));
+
+            total += price;
+
+            details +=
+            "الوجبة: " + mealName +
+            "\nالسعر: " + price + " ل.س\n\n";
+        }
+    });
+
+    if(total === 0){
+
+        alert("يرجى اختيار وجبة واحدة على الأقل");
+        return;
+    }
+
+    let tax = total * 0.05;
+
+    let finalTotal = total + tax;
+
+    alert(
+
+    "تم إرسال الطلب بنجاح ✔️\n\n" +
+
+    "الوجبات المختارة:\n\n" +
+
+    details +
+
+    "المجموع: " + total + " ل.س\n" +
+
+    "الضريبة 5%: " + tax + " ل.س\n" +
+
+    "الإجمالي النهائي: " + finalTotal + " ل.س"
+
+    );
+}
+</script>
+</body>
+</html>
